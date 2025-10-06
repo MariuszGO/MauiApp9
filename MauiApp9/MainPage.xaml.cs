@@ -1,28 +1,72 @@
-﻿namespace MauiApp9
+﻿using System.Collections.ObjectModel;
+
+namespace MauiApp9
 {
     public partial class MainPage : ContentPage
     {
-        public List<FoodItem> Food { get; set; }
+        public ObservableCollection<Samochod> Samochod_Kolekcja { get; set; }
 
         public MainPage()
         {
-            InitializeComponent(); 
+            InitializeComponent();
 
-            Food = new List<FoodItem>
+            Samochod_Kolekcja = new ObservableCollection<Samochod>
             {
-                new FoodItem { Name = "Pizza", Description = "Włoski klasyk z serem i sosem pomidorowym" },
-                new FoodItem { Name = "Burger", Description = "Wołowina, bułka i dodatki" },
-                new FoodItem { Name = "Sushi", Description = "Ryż i świeża ryba" },
-                new FoodItem { Name = "Sałatka", Description = "Zdrowa mieszanka warzyw" }
+                new Samochod
+                {
+                    Marka = "Samochód 1",
+                    Model = "S1",
+                    Opis = "To jest opis do samochodu1",
+                    ImageUrl = "sam1.jpg"
+                },
+                new Samochod
+                {
+                    Marka = "Samochód 2",
+                    Model = "S2",
+                    Opis = "To jest opis do samochodu2",   
+                    ImageUrl = "sam2.jpg"
+                },
+                   new Samochod
+                {
+                    Marka = "Samochód 1",
+                    Model = "S1",
+                    Opis = "To jest opis do samochodu1",
+                    ImageUrl = "sam3.jpg"
+                },
+                new Samochod
+                {
+                    Marka = "Samochód 2",
+                    Model = "S2",
+                    Opis = "To jest opis do samochodu2",
+                    ImageUrl = "sam4.jpg"
+                },
+                   new Samochod
+                {
+                    Marka = "Samochód 1",
+                    Model = "S1",
+                    Opis = "To jest opis do samochodu1",
+                    ImageUrl = "sam5.jpg"
+                },
+                new Samochod
+                {
+                    Marka = "Samochód 2",
+                    Model = "S2",
+                    Opis = "To jest opis do samochodu2",
+                    ImageUrl = "sam6.jpg"
+                },
+
             };
 
-            BindingContext = this; 
+            BindingContext = this;
         }
+     
     }
 
-    public class FoodItem
+    public class Samochod
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Marka { get; set; }
+        public string Model { get; set; }
+        public string Opis { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

@@ -4,19 +4,48 @@
              xmlns:local="clr-namespace:MauiApp9"
              x:Class="MauiApp9.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="30,0" Spacing="25">
+    <CarouselView ItemsSource="{Binding Samochod_Kolekcja}">
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    
+                    
+                    
+                    <Frame HasShadow="True"
+                       BorderColor="DarkGray"
+                       CornerRadius="5"
+                       Margin="20"
+                       HeightRequest="600"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand">
+                        <StackLayout>
+                            <Label Text="{Binding Marka}"
+                               FontAttributes="Bold"
+                               FontSize="18"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                            <Label Text="{Binding Model}"
+                                HorizontalOptions="Center" />
+                            <Image Source="{Binding ImageUrl}"
+                              
+                               HeightRequest="600"
+                               WidthRequest="300"
+                               HorizontalOptions="Center" />
+                           
+                            <Label Text="{Binding Opis}"
+                               FontAttributes="Italic"
+                               HorizontalOptions="Center"
+                               MaxLines="5"
+                               />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+            
+            
+            
+        </CarouselView.ItemTemplate>
+    </CarouselView>
 
-            <ListView ItemsSource="{Binding Food}">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="local:FoodItem">
-                        <TextCell Text="{Binding Name}"
-                                  Detail="{Binding Description}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-        </VerticalStackLayout>
-    </ScrollView>
 
 </ContentPage>
