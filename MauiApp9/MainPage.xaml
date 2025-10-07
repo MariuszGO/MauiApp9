@@ -4,39 +4,63 @@
              xmlns:local="clr-namespace:MauiApp9"
              x:Class="MauiApp9.MainPage">
 
-    <CarouselView ItemsSource="{Binding Samochod_Kolekcja}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="White"
+         BorderColor="DarkGray"
+ CornerRadius="15"
+ Margin="5"
+HorizontalOptions="Center"
+ VerticalOptions="CenterAndExpand"
+  Shadow="{Shadow Brush='Grey', Radius='15'}">
+
+            <Label FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0" Text="Komis Samochodowy"></Label>
+        </Frame>
+
+        <CarouselView Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Samochod_Kolekcja}" PeekAreaInsets="75">
         <CarouselView.ItemTemplate>
             <DataTemplate>
-                <StackLayout>
+                <StackLayout >
                     
                     
                     
                     <Frame HasShadow="True"
                        BorderColor="DarkGray"
-                       CornerRadius="5"
-                       Margin="20"
-                       HeightRequest="600"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand">
+                       CornerRadius="15"
+                       Margin="5"
+                      HeightRequest="400"
+                      HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"
+                        Shadow="{Shadow Brush='Grey', Radius='15'}" 
+                           >
                         <StackLayout>
                             <Label Text="{Binding Marka}"
                                FontAttributes="Bold"
                                FontSize="18"
                                HorizontalOptions="Center"
                                VerticalOptions="Center" />
-                            <Label Text="{Binding Model}"
-                                HorizontalOptions="Center" />
-                            <Image Source="{Binding ImageUrl}"
-                              
-                               HeightRequest="600"
-                               WidthRequest="300"
-                               HorizontalOptions="Center" />
-                           
+                            <Label Text="{ Binding Model}"
+                              />
                             <Label Text="{Binding Opis}"
-                               FontAttributes="Italic"
-                               HorizontalOptions="Center"
-                               MaxLines="5"
-                               />
+                             FontAttributes="Italic"
+                             HorizontalOptions="Center"
+                             MaxLines="5"
+                             />
+                            <Image Source="{Binding ImageUrl}"
+                               HeightRequest="200"
+                               WidthRequest="200"
+                               HorizontalOptions="Center" />
+                            <Button WidthRequest="150" Text="Kupuję"></Button>
+                           
                         </StackLayout>
                     </Frame>
                 </StackLayout>
@@ -46,6 +70,7 @@
             
         </CarouselView.ItemTemplate>
     </CarouselView>
+    </Grid>
 
 
 </ContentPage>

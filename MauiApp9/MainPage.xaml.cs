@@ -14,46 +14,40 @@ namespace MauiApp9
             {
                 new Samochod
                 {
-                    Marka = "Samochód 1",
-                    Model = "S1",
-                    Opis = "To jest opis do samochodu1",
+                    Marka = "Ford",
+                    Model = "Mustang",
+                    Opis = "Ford Mustang Shelby GT500",
                     ImageUrl = "sam1.jpg"
                 },
                 new Samochod
                 {
-                    Marka = "Samochód 2",
-                    Model = "S2",
-                    Opis = "To jest opis do samochodu2",   
+                    Marka = "Mercedes",
+                    Model = "W123",
+                    Opis = "Mercedes W123 2.4D",   
                     ImageUrl = "sam2.jpg"
                 },
                    new Samochod
                 {
-                    Marka = "Samochód 1",
-                    Model = "S1",
-                    Opis = "To jest opis do samochodu1",
+                    Marka = "BMW",
+                    Model = "X3",
+                    Opis = "BMW X3 3.0D ",
                     ImageUrl = "sam3.jpg"
                 },
                 new Samochod
                 {
-                    Marka = "Samochód 2",
-                    Model = "S2",
-                    Opis = "To jest opis do samochodu2",
+                    Marka = "Mercedes",
+                    Model = "W124",
+                    Opis = "Mercedes",
                     ImageUrl = "sam4.jpg"
                 },
                    new Samochod
                 {
-                    Marka = "Samochód 1",
-                    Model = "S1",
-                    Opis = "To jest opis do samochodu1",
+                    Marka = "Mercedes",
+                    Model = "CLK",
+                    Opis = "Tu będzie opis",
                     ImageUrl = "sam5.jpg"
                 },
-                new Samochod
-                {
-                    Marka = "Samochód 2",
-                    Model = "S2",
-                    Opis = "To jest opis do samochodu2",
-                    ImageUrl = "sam6.jpg"
-                },
+              
 
             };
 
